@@ -56,11 +56,6 @@
         </dependency>
         <dependency>
             <groupId>org.diirt</groupId>
-            <artifactId>web-pods-datasource</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.diirt</groupId>
             <artifactId>datasource-graphene</artifactId>
             <version>3.0.3-SNAPSHOT</version>
         </dependency>
