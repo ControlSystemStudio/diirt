@@ -80,6 +80,7 @@
         <github.global.server>github.com</github.global.server>
         <serviceloader.maven.plugin.version>1.0.4</serviceloader.maven.plugin.version>
         <antlr.runtime.version>3.4</antlr.runtime.version>
+        <maven.test.failure.ignore>true</maven.test.failure.ignore>
     </properties>
 
     <profiles>
