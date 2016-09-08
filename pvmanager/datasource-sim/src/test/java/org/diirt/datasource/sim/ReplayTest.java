@@ -4,9 +4,6 @@
  */
 package org.diirt.datasource.sim;
 
-import org.diirt.datasource.sim.NameParser;
-import org.diirt.datasource.sim.Replay;
-
 import java.util.List;
 
 import org.diirt.util.time.TimeInterval;
@@ -97,7 +94,7 @@ public class ReplayTest {
         // Check first value
         VDouble value = values.get(0);
         assertThat(value.getValue(), equalTo(0.0));
-        assertThat(value.getTimestamp(), within(TimeInterval.around(ofMillis(1), start)));
+        assertThat(value.getTimestamp(), within(TimeInterval.around(ofMillis(2), start)));
         assertThat(value.getAlarmSeverity(), equalTo(AlarmSeverity.NONE));
         assertThat(value.getAlarmName(), equalTo("NONE"));
         assertThat(value.getTimeUserTag(), equalTo(0));
@@ -113,7 +110,7 @@ public class ReplayTest {
         // Check second value
         value = values.get(1);
         assertThat(value.getValue(), equalTo(1.0));
-        assertThat(value.getTimestamp(), within(TimeInterval.around(ofMillis(1), start.plus(ofMillis(1000)))));
+        assertThat(value.getTimestamp(), within(TimeInterval.around(ofMillis(2), start.plus(ofMillis(1000)))));
         assertThat(value.getAlarmSeverity(), equalTo(AlarmSeverity.INVALID));
         assertThat(value.getAlarmName(), equalTo("RECORD"));
         assertThat(value.getTimeUserTag(), equalTo(0));
@@ -121,7 +118,7 @@ public class ReplayTest {
         // Check third value
         value = values.get(2);
         assertThat(value.getValue(), equalTo(2.0));
-        assertThat(value.getTimestamp(), within(TimeInterval.around(ofMillis(1), start.plus(ofMillis(2000)))));
+        assertThat(value.getTimestamp(), within(TimeInterval.around(ofMillis(2), start.plus(ofMillis(2000)))));
         assertThat(value.getAlarmSeverity(), equalTo(AlarmSeverity.NONE));
         assertThat(value.getAlarmName(), equalTo("NONE"));
         assertThat(value.getTimeUserTag(), equalTo(0));
